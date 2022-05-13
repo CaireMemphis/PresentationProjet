@@ -1,0 +1,45 @@
+@startuml
+
+title Gestion de troupeau
+
+|Gerant|
+start
+
+
+
+repeat
+:se connecter;
+repeat while (renseigner les bons id et mdp) is (non)
+repeat
+
+:"acceder a la page d'acceuil";
+
+split
+:Enregistrer un animal;
+repeat 
+:"veuillez donner un motif valable !";
+repeat while (motif valable) is (non)
+:animal enregistre;
+
+kill
+split again 
+:Supprimer un animal;
+repeat 
+:"veuillez donner un motif valable !";
+repeat while (motif valable) is (non)
+:animal supprime;
+kill
+split again
+:consulter la liste;
+kill
+split again 
+:rechercher un animal;
+kill
+split again
+:demander la deconnexion;
+endsplit
+
+:se deconnecter;
+end
+
+@enduml
